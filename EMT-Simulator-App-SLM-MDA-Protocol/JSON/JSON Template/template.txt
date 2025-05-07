@@ -1,0 +1,36 @@
+protocol:
+  - title: "<Title of the Protocol>"
+  - id: "<Protocol ID>"
+  - steps:
+      - input: "<Question to ask the user>"
+        options:
+          - yes:
+              - action: "<Action to take for 'yes' answer>"
+              - action: "<Additional action (optional)>"
+              - input: "<Next question or decision point>"
+                options:
+                  - yes:
+                      - action: "<Action for 'yes' answer>"
+                  - no:
+                      - action: "<Action for 'no' answer>"
+                      - input: "<Next question or decision point (optional)>"
+                        options:
+                          - yes:
+                              - action: "<Action for 'yes' answer>"
+                          - no:
+                              - action: "<Action for 'no' answer>"
+          - no:
+              - action: "<Action to take for 'no' answer>"
+              - action: "<Additional action (optional)>"
+              - input: "<Next question or decision point>"
+                options:
+                  - yes:
+                      - action: "<Action for 'yes' answer>"
+                  - no:
+                      - action: "<Action for 'no' answer>"
+                      - input: "<Next question or decision point (optional)>"
+                        options:
+                          - yes:
+                              - action: "<Action for 'yes' answer>"
+                          - no:
+                              - action: "<Action for 'no' answer>"

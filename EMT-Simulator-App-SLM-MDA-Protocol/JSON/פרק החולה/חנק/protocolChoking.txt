@@ -1,0 +1,38 @@
+protocol:
+  - title: "Foreign Body Airway Obstruction"
+  - id: "protocol-1"
+  - steps:
+      - input: "Is the patient conscious?"
+        options:
+          - yes:
+              - action: "General approach to a sick patient"
+              - action: "Encourage coughing"
+              - input: "Improvement of patient status?"
+                options:
+                  - yes:
+                      - action: "Hospital seating area, continued monitoring and treatment, consider reporting to hospital"
+                  - no:
+                      - action: "Perform the Heimlich maneuver or abdominal thrusts"
+                      - input: "Is there an improvement?"
+                        options:
+                          - yes:
+                              - action: "Hospital seating area, continued monitoring and treatment, consider reporting to hospital"
+                          - no:
+                              - action: "Continue to perform the Heimlich maneuver or abdominal thrusts"
+                              - action: "Consider the need to transfer the CPR protocol"
+          - no:
+              - action: "Perform 30 compressions"
+              - action: "Give 2 rescue breaths"
+              - input: "Is there a pulse?"
+                options:
+                  - yes:
+                      - action: "Perform the Heimlich maneuver or abdominal thrusts"
+                      - input: "Is there an improvement?"
+                        options:
+                          - yes:
+                              - action: "Hospital seating area, continued monitoring and treatment, consider reporting to hospital"
+                          - no:
+                              - action: "Continue to perform the Heimlich maneuver or abdominal thrusts"
+                              - action: "Consider the need to transfer the CPR protocol"
+                  - no:
+                      - action: "Protocol: CPR"
